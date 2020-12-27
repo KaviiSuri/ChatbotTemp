@@ -6,7 +6,7 @@ class Transition {
         this.data = {
             message: "",
             keywords: "",
-            end: '',
+            end: false,
             spareContent: '',
             intent: '',
             transitionState: '',
@@ -42,15 +42,20 @@ class Transition {
         inpForm.parentNode.replaceChild(newForm, inpForm)
         // load values from this to the form
         Object.keys(this.data).forEach(key =>  {
-            document.getElementById(key).value = this.data[key]
+            if(key == 'end')
+            {
+                    document.getElementById(key).value = this.data[key];
+            } else 
+                document.getElementById(key).value = this.data[key]
         })
-        
     }
     onFormSubmit = (e) => {
         e.preventDefault()
 
         // on submit, load values from form to this
         const formData = this.serializeForm(e.target)
+        e.target.elements.namedItem('end').checked ? formData.end = true : formData.end = false;
+        console.log(formData)
         Object.keys(this.data).forEach(key =>  {
             this.data[key] = formData[key]
         })

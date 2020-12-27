@@ -9,6 +9,10 @@ YML_FILE_PATH = 'data.yml'
 def index():
     return app.send_static_file('index.html')
 
+@app.route('/success', methods=['GET'])
+def success():
+    return app.send_static_file('success.html')
+
 @app.route('/data', methods=['POST'])
 def data():
     data = request.json

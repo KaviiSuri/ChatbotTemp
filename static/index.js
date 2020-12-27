@@ -25,7 +25,10 @@ proceedBtn.addEventListener('click', () => {
             'Content-Type': 'application/json'
         }
         
-    }).then(res => res.text()).then(data => console.log(data)).catch(err => console.log(err))
+    }).then(res => res.text()).then(data => {
+        // console.log(data)
+        window.location = '/success'
+    }).catch(err => console.log(err))
 })
 
 //detect Escape key press

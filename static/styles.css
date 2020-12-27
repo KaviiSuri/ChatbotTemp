@@ -1,0 +1,183 @@
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"),
+    local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"),
+    local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "system";
+}
+
+body {
+  background: #003049;
+}
+
+button {
+  cursor: pointer;
+}
+
+#input-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10% auto;
+  max-width: 800px;
+}
+
+/* Inline #1 | http://localhost:5500/ */
+
+#input-form label {
+  font-weight: bold;
+  color: rgb(85, 85, 85);
+}
+
+#form-modal {
+  display: none;
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+#input-form h2 {
+  margin-bottom: 10px;
+}
+input {
+  border: 1px solid rgb(163, 162, 162);
+  padding: 8px;
+  border-radius: 8px;
+}
+#input-form input {
+  margin-bottom: 1em;
+}
+
+input:focus {
+  border: 1px solid #219ebc;
+}
+
+#input-form button {
+  height: 3em;
+  background: #456268;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background: white;
+  min-height: 94vh;
+  margin-top: 3vh;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.control-btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* align-content: center; */
+}
+.control-btns button {
+  border: 2px solid #219ebc;
+  background: transparent;
+  padding: 8px;
+  border-radius: 8px;
+  color: #219ebc;
+  font-size: 1em;
+}
+
+.control-btns button:hover {
+  border: 2px solid transparent;
+  background: #219ebc;
+  color: white;
+}
+
+.add-trans-btn {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1em;
+  border: 2px solid #fb8500;
+  background: white;
+  color: #fb8500;
+}
+
+.add-trans-btn:hover {
+  background: #fb8500;
+  color: white;
+}
+.state {
+  padding-bottom: 20px;
+  border: 3px solid #023047;
+  padding-top: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.state-head {
+  display: flex;
+  justify-content: space-evenly;
+  background: #023047;
+  color: white;
+  padding: 10px;
+  align-items: center;
+}
+
+.state-head h1 {
+  font-size: 24px;
+  font-weight: 550;
+}
+.trans {
+  display: block;
+  width: 80%;
+  height: 45px;
+  margin: auto;
+  margin-top: 20px;
+  background: transparent;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  border: 2px solid #fb8500;
+  color: #fb8500;
+}
+
+.trans:hover {
+  background: #fb8500;
+  color: white;
+}
+@media (min-width: 768px) {
+  .container,
+  #input-form {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+  #input-form {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container,
+  #input-form {
+    width: 1170px;
+  }
+}

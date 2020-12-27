@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Bot</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="control-btns">
+        <button id="add-state">Add State</button>
+        <input
+          type="text"
+          placeholder="Greeting"
+          name="greeting"
+          id="greeting"
+        />
+        <button id="proceed">Proceed</button>
+      </div>
+      <div id="states"></div>
+    </div>
+    <div id="form-modal">
+      <form id="input-form">
+        <h2>Please Select a Transition to Add</h2>
+        <label for="message">Message</label>
+        <input type="text" name="message" id="message" />
+        <label for="keywords">Keywords - Comma (,) seperated</label>
+        <input type="text" name="keywords" id="keywords" />
+        <label for="end">End</label>
+        <input type="text" name="end" id="end" />
+        <label for="spareContent">Spare Content</label>
+
+        <input type="text" name="spareContent" id="spareContent" />
+        <label for="intent">Intent</label>
+        <input type="text" name="intent" id="intent" />
+        <label for="transitionState">Transition State</label>
+        <input type="text" name="transitionState" id="transitionState" />
+        <label for="type">Type</label>
+        <input type="text" name="type" id="type" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="/static/Transition.js"></script>
+    <script src="/static/State.js"></script>
+    <script src="/static/index.js"></script>
+  </body>
+</html>

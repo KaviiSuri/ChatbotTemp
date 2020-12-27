@@ -1,16 +1,20 @@
 from flask import Flask, request, jsonify
 import yaml
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 YML_FILE_PATH = 'data.yml'
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
 def index():
+    return app.send_static_file('index.html')
+
+@app.route('/data', methods=['POST'])
+def data():
     data = request.json
     with open(YML_FILE_PATH, 'w') as outfile:
         yaml.dump(data, outfile, default_flow_style=False)
     return jsonify(data)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

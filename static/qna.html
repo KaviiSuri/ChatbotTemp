@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Bot</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="control-btns" style="justify-content: flex-end">
+        <button id="proceed">Proceed</button>
+      </div>
+      <div id="states">
+        <div id="questions" class="state">
+          <div class="state-head">
+            <h1>Questions</h1>
+            <button class="add-trans-btn">Add Question</button>
+          </div>
+        </div>
+        <div id="abuse" class="state">
+          <div class="state-head">
+            <h1>Abuse</h1>
+          </div>
+          <div class="inp-container">
+            <label for="abuse-statement">Statement</label>
+            <input type="text" name="abuse-statement" id="abuse-statement" />
+            <label for="abuse-keywords">Keywords - Comma (,) seperated</label>
+            <input type="text" name="abuse-keywords" id="abuse-keywords" />
+          </div>
+        </div>
+        <div id="repeat" class="state">
+          <div class="state-head">
+            <h1>Repeat</h1>
+          </div>
+          <div class="inp-container">
+            <label for="repeat-statement">Statement</label>
+            <input type="text" name="repeat-statement" id="repeat-statement" />
+            <label for="abuse-keywords">Keywords - Comma (,) seperated</label>
+            <input type="text" name="repeat-keywords" id="repeat-keywords" />
+          </div>
+        </div>
+        <div id="spare" class="state">
+          <div class="state-head">
+            <h1>Spare</h1>
+          </div>
+          <div class="inp-container">
+            <label for="spare-statement">Statement</label>
+            <input type="text" name="spare-statement" id="spare-statement" />
+            <label for="spare-keywords">Keywords - Comma (,) seperated</label>
+            <input type="text" name="spare-keywords" id="spare-keywords" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="form-modal">
+      <form id="input-form">
+        <h2>Please Select a Question to Add</h2>
+        <label for="answer">Answer</label>
+        <input type="text" name="answer" id="answer" />
+        <label for="keywords">Keywords - Comma (,) seperated</label>
+        <input type="text" name="keywords" id="keywords" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <!-- <script src="/static/.js"></script> -->
+    <!-- <script src="/static/State.js"></script> -->
+    <script src="/static/qna.js"></script>
+  </body>
+</html>
